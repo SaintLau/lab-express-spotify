@@ -1,0 +1,11 @@
+<h1>Artist Search Results:</h1>
+<ul>  <!-- like the nba and ironbeers example-->
+{{#each artistList}}
+<li>
+    {{name}}
+    <img src={{images.2.url}}>
+    <a href="/albums/{{id}}">Albums</a>  <!-- {{id}} will work? like que did to search mongo?-->
+</li>
+{{/each}}
+</ul>
+

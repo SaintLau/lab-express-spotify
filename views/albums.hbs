@@ -1,0 +1,13 @@
+<!-- All results will be displayed here -->
+<h1>Albums</h1>
+<ul>
+    {{#each albums}} <!-- because is all albums -->
+    <li>
+        {{name}}
+        <img src={{images.2.url}}>
+    </li>
+
+    
+    <a href="/tracks/{{id}}">Album Tracks</a>
+    {{/each}}
+</ul>
