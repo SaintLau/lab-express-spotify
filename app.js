@@ -36,8 +36,8 @@ app.get('/', (req, res) => {
 app.get('/artist-search', (req, res) => {
   //here we are using a method from the npm package:
   spotifyApi
-  .searchArtists(req.query.artist)
-  .then(data => {
+  .searchArtists(req.query.artist) //artist here is the one on my hbs, if they wrote bananas on "name", it was bananas______-Use query because is a form with a GET reference
+  .then(data => { //promise resolve
     console.log('The received data from the API: ', data.body);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     res.render('artist-search-results', { artistList: data.body.artists.items //itens is an array odf objects that contains the info that we look on terminal
